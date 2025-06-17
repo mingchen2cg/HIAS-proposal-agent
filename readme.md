@@ -12,7 +12,7 @@ AI Proposal Generator 是一个基于 Streamlit 的 Web 应用程序，旨在利
 - **知识库构建**: 用户可以上传多个 PDF 或 DOCX 文件，应用会提取文本和图片，并使用 Nebius AI 的 Embedding 模型构建一个 FAISS 向量知识库。
 - **模板定制**: 用户可以使用默认的提案模板，在线编辑，或上传自己的模板。
 - **逐节生成与编辑**: 应用会根据模板逐节生成内容。用户可以在生成每一节后进行审查和修改，确保最终质量。
-- **工作流图生成**: 能够根据项目需求，自动生成 Mermaid 格式的自定义工作流图。
+<!-- - **工作流图生成**: 能够根据项目需求，自动生成 Mermaid 格式的自定义工作流图。 -->
 - **多格式下载**: 完成的提案可以下载为 DOCX 或 PDF 格式。
 
 ## 2. 项目文件结构
@@ -62,8 +62,8 @@ AI Proposal Generator 是一个基于 Streamlit 的 Web 应用程序，旨在利
 1. **克隆项目**:
 
    ```bash
-   git clone xxx.git
-   cd xxx
+   git clone https://github.com/mingchen2cg/HIAS-proposal-agent.git
+   cd HIAS-proposal-agent
    ```
 
 2. **创建虚拟环境:
