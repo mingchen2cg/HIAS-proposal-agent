@@ -129,12 +129,12 @@ AI Proposal Generator 是一个基于 Streamlit 的 Web 应用程序，旨在利
 2. **配置**: 用户在侧边栏输入 API 密钥并选择模型。
 3. 输入与知识库构建:
    - 用户提供需求和知识库文件。
-   - 点击 "Create Knowledge Base" 后，`file_utils.py` 中的 `extract_text_from_file` 被调用，从所有文件中提取文本和图片。
+   - 点击 "创建知识库" 后，`file_utils.py` 中的 `extract_text_from_file` 被调用，从所有文件中提取文本和图片。
    - 所有文本（包括需求和文件内容）被 `RecursiveCharacterTextSplitter` 切分成小块。
    - `create_kb_from_texts` 函数调用 `NebiusEmbeddings` 将文本块向量化，并存入一个 `FAISS` 向量存储中，该存储保存在 `st.session_state.knowledge_base` 中。
 4. **模板解析**: 用户选定模板后，`parse_template_sections` 函数将模板的 Markdown 文本解析成一个包含各章节标题和原始内容的字典列表。
 5. 迭代式内容生成:
-   - 用户点击 "Generate Next Section"。
+   - 用户点击 "生成下一章节"。
    - 应用从知识库创建一个检索器 (`as_retriever`)。
    - 应用构造一个查询（包含当前章节标题和项目需求），并用检索器获取相关的上下文文档。
    - 分支逻辑:
